@@ -1,0 +1,32 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: reactive
+  # admin server config
+  boot:
+    admin:
+      client:
+        url: http://localhost:9999
+  data:
+    cassandra:
+      keyspace-name: reactive
+      port: 9042
+      schema-action: create_if_not_exists
+      contact-points:
+        - localhost
+# actuator config
+management:
+  endpoints:
+    web:
+      base-path: /management
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+  info:
+    git:
+      mode: full
+test:
+  property: 'Hello, World'
