@@ -29,4 +29,4 @@ management:
     git:
       mode: full
 test:
-  property: 'Hello, property has been refreshed!'
+  property: 'Hello, World!'
