@@ -1,0 +1,30 @@
+server:
+  port: 8090
+spring:
+  application:
+    name: order-service
+  # admin server config
+#  boot:
+#    admin:
+#      client:
+#        url: http://localhost:9999
+#  data:
+#    cassandra:
+#      keyspace-name: order
+#      port: 9042
+#      schema-action: create_if_not_exists
+#      contact-points:
+#        - localhost
+# actuator config
+management:
+  endpoints:
+    web:
+      base-path: /management
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+  info:
+    git:
+      mode: full
