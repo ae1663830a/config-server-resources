@@ -25,5 +25,4 @@ zuul:
       url: https://google.com
   # ignores automatically created routes
   ignored-services:
-    - config-server
     - order-service
